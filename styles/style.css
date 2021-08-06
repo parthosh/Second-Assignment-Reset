@@ -5,22 +5,20 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-.container{
-    margin-top: 70px;
-    width: 60%;
-}
+
 /* Header Styles */
 .header-container{
     display: flex;
     background-color: #2D25A0;
 }
 .header-title{
-    width: 485px;
+    width: 485px auto;
     height: 230px;
-    font-weight: bolder;
-    line-height: 0.7;
+    font-weight: 700;
+    line-height: 1.3;
     margin: 207px 102px 240px 156px;
-    color: white;  
+    color: white;
+    
 }
 .link-button{
     background-color: #E02C6D;
@@ -43,13 +41,20 @@ body{
     margin: 153px 141px 86px;
 }
 /* Players images and Description Styles */
+.container{
+    margin-top: 70px;
+    width: 70%;
+}
 .players{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
 }
 .player{
-    padding: 25px;
-    margin-left: 50px;
+    width: 70%;
+    box-shadow: 10px 10px 60px lightgrey;
+    padding: 35px;
+    margin-left: 40px;
+    margin-top: 27px;
 }
 .player img{
     width: 300px;
@@ -143,3 +148,41 @@ footer p{
 .social-icon .fa-youtube{
     margin-right: 14px;
 }
+
+/*-----------------
+ Media Queries 
+ ------------------*/
+ /* Mobile-Devices */
+ 
+ @media only screen and (max-width:480px) {
+     .header-container{
+         width: 100%;
+         display: block;
+     }
+     .header-image img{
+        width: 100%;
+         margin: 0;
+         
+     }
+     .players{
+        grid-template-columns:repeat(1, 1fr);
+     }
+     .player img{
+         width: 100%;
+     }
+     .main-area{
+        display: block;
+        margin: 0;
+    }
+    .statistics-area, .join-area{
+        margin-left: 40px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer-image img{
+        width: 100%;
+    }
+}
+
+     
+
